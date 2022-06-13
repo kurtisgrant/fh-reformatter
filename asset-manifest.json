@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.9a85edc7.css",
-    "main.js": "/static/js/main.2fd67cc1.js",
-    "index.html": "/index.html",
-    "main.9a85edc7.css.map": "/static/css/main.9a85edc7.css.map",
-    "main.2fd67cc1.js.map": "/static/js/main.2fd67cc1.js.map"
+    "main.css": "/fh-reformatter/static/css/main.9a85edc7.css",
+    "main.js": "/fh-reformatter/static/js/main.2fd67cc1.js",
+    "index.html": "/fh-reformatter/index.html",
+    "main.9a85edc7.css.map": "/fh-reformatter/static/css/main.9a85edc7.css.map",
+    "main.2fd67cc1.js.map": "/fh-reformatter/static/js/main.2fd67cc1.js.map"
   },
   "entrypoints": [
     "static/css/main.9a85edc7.css",
