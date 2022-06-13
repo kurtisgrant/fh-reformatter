@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/fh-reformatter/static/css/main.9a85edc7.css",
-    "main.js": "/fh-reformatter/static/js/main.2fd67cc1.js",
+    "main.js": "/fh-reformatter/static/js/main.cfc92a03.js",
     "index.html": "/fh-reformatter/index.html",
     "main.9a85edc7.css.map": "/fh-reformatter/static/css/main.9a85edc7.css.map",
-    "main.2fd67cc1.js.map": "/fh-reformatter/static/js/main.2fd67cc1.js.map"
+    "main.cfc92a03.js.map": "/fh-reformatter/static/js/main.cfc92a03.js.map"
   },
   "entrypoints": [
     "static/css/main.9a85edc7.css",
-    "static/js/main.2fd67cc1.js"
+    "static/js/main.cfc92a03.js"
   ]
 }
