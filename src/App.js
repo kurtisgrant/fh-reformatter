@@ -1,4 +1,5 @@
 import './App.css';
+import Header from './Header';
 import TradeConfirmation from './TradeConfirmation';
 import { useState, useRef } from 'react';
 
@@ -15,6 +16,23 @@ function App() {
   function clear() {
     setOutputData([]);
     inputArea.current.innerHTML = '';
+  }
+
+  function printOutput() {
+    let printWindow = window.open('', 'PRINT', 'height=900,width=800');
+
+    printWindow.document.write(`<html><head><title>Trade Confirmation</title>`);
+    printWindow.document.write('</head><body style="font-family: sans-serif">');
+    printWindow.document.write(outputArea.current.innerHTML);
+    printWindow.document.write('</body></html>');
+
+    printWindow.document.close(); // necessary for IE >= 10
+    printWindow.focus(); // necessary for IE >= 10*/
+
+    printWindow.print();
+    printWindow.close();
+
+    return true;
   }
 
 
@@ -72,12 +90,11 @@ function App() {
       <button onClick={scrape}>Add</button>
       <button onClick={clear}>Clear All</button>
       <h2 className="main-header">Output</h2>
+      <button onClick={printOutput}>Print</button>
 
       <div className="output-area" ref={outputArea}>
 
-        {outputData.length === 1 ? <h2>Trade Confirmation</h2> : outputData.length > 1 ? <h2>Trade Confirmations</h2> : null}
-        {processedBy.length > 0 && <h3>Processed by {processedBy}</h3>}
-        <br />
+        <Header items={outputData} processedBy={processedBy} />
 
         <div>{outputData.map(d => <TradeConfirmation data={d} key={d.get("Order Id")} />)}</div>
 
