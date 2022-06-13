@@ -6,6 +6,7 @@ function App() {
   const [outputData, setOutputData] = useState([]);
   const [processedBy, setProcessedBy] = useState('');
   const inputArea = useRef(null);
+  const outputArea = useRef(null);
 
   function updateName(e) {
     setProcessedBy(e.target.value);
@@ -72,7 +73,7 @@ function App() {
       <button onClick={clear}>Clear All</button>
       <h2 className="main-header">Output</h2>
 
-      <div className="output-area">
+      <div className="output-area" ref={outputArea}>
 
         {outputData.length === 1 ? <h2>Trade Confirmation</h2> : outputData.length > 1 ? <h2>Trade Confirmations</h2> : null}
         {processedBy.length > 0 && <h3>Processed by {processedBy}</h3>}
